@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio responsive complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">L' Oreal Brandstorm 2023 - Miracle</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#trend" class="nav__link">Trend</a></li>
+                        <li class="nav__item"><a href="#product" class="nav__link">Product</a></li>
+                        <li class="nav__item"><a href="#app" class="nav__link">App</a></li>
+                        <li class="nav__item"><a href="#nft" class="nav__link">NFT</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <h1 class="home__title"><span>Makeup<br>Recommender.</span></h1>
+                    <button class="home__contact-btn">Contact</button>
+                    <div class="home__social">  
+                        <a href="#" class="home__social-item">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+                        <a href="#" class="home__social-item">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                        <a href="#" class="home__social-item">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                        <a href="#" class="home__social-item">
+                            <i class="bx bxl-youtube"></i>
+                        </a>
+                    </div>
+                    <img src="assets/img/img3.png" alt="" class="home__img">
+                    
+                </div>
+            </section>
+            
+            <!--===== TREND =====-->
+            <section class="trend section " id="trend">
+                <h2 class="section-title">Trend Spotter</h2>
+                <div class="container_trend">
+                    <div id="slide_trend">
+                        <div class="item_trend" style="background-image: url(./assets/img/trendspotter/Hero_Magic_Brow.jpg); ">
+                            <div class="content_trend">
+                                <div class="name_trend">Brow Magic</div>
+                                <div class="des_trend">Using L’Oréal’s Modiface AR technology, L’Oréal Brow Magic scans the user’s face and makes recommendations for microblading, micro-shading, or filler effects.</div>
+                                <button>See more</button>
+                            </div>
+                        </div>
+                        <div class="item_trend" style="background-image: url(./assets/img/trendspotter/KerastaseDiagEmily-hero.jpg);">
+                            <div class="content_trend">
+                                <div class="name_trend">HAPTA</div>
+                                <div class="des_trend">HAPTA’s leveling device will be piloted with L’Oréal-owned Lancôme in 2023, first with a lipstick applicator followed by additional makeup applications in the future.</div>
+                                <button>See more</button>
+                            </div>
+                        </div>
+                        <div class="item_trend" style="background-image: url(./assets/img/trendspotter/LancomeSkinScreenHero.jpg);">
+                            <div class="content_trend">
+                                <div class="name_trend" style="color: black;">Colorsonic</div>
+                                <div class="des_trend" style="color: black;" >The Colorsonic is a handheld device from L'Oreal that aims to make the at-home hair coloring process less messy and more consistent.</div>
+                                <button>See more</button>
+                            </div>
+                        </div>
+                        <div class="item_trend" style="background-image: url(./assets/img/trendspotter/la-roche-posay-hero.jpg);">
+                            <div class="content_trend">
+                                <div class="name_trend">YSL Scent-Sation</div>
+                                <div class="des_trend">YSL Scent-Sation is a state-of-the-art, in-store experience leveraging neuroscience to provide personalized fragrance advice, premiering at the Dubai Mall in the YSL Beauty Innovation Lab pop up from December 16th to 28th, 2021.</div>
+                                <button>See more</button>
+                            </div>
+                        </div>
+                        <div class="item_trend" style="background-image: url(./assets/img/trendspotter/SkinCeuticalsHero.jpg);">
+                            <div class="content_trend">
+                                <div class="name_trend" style="color: black;">SKIN CEUTICALS</div>
+                                <div class="des_trend" style="color: black;" >Skinceuticals' mission is to improve skin health and provide customers with the ultimate professional skin care solution.</div>
+                                <button>See more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="prev"><i class='bx bxs-left-arrow'></i></button>
+                        <button id="next"><i class='bx bxs-right-arrow' ></i></button>
+                    </div>
+                </div>
+                <script>
+                     document.getElementById('next').onclick = function(){
+                        let lists = document.querySelectorAll('.item_trend');
+                        document.getElementById('slide_trend').appendChild(lists[0]);
+                    }
+                    document.getElementById('prev').onclick = function(){
+                        let lists = document.querySelectorAll('.item_trend');
+                        document.getElementById('slide_trend').prepend(lists[lists.length - 1]);
+                    }
+                </script>
+            </section>
+
+            <!--===== PRODUCT =====-->
+            <section class="product section " id="product">
+                <h2 class="section-title">Product</h2>
+                <div class="list">
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes1" src="https://www.maybelline.com/~/media/mny/us/eye-makeup/mascara/lash-sensational-sky-high-waterproof-mascara-makeup/maybelline-lash-sensational-sky-high-wtp-803-brownish-black-041554590913-o.jpg">
+                        <div><h2>LASH SENSATIONAL SKY HIGH®</h2>
+                        <p class="price">12<sup>.99$</sup></p>
+                        <p class="descr">WATERPROOF MASCARA MAKEUP</b></p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div>
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes2" src="https://www.maybelline.com/~/media/mny/us/lips-makeup/lip-gloss/lifter-gloss-lip-gloss-makeup-with-hyaluronic-acid/pearl/maybelline-lip-color-sensational-lifter-gloss-001-pearl-041554583854-av11%20(1).jpg">
+                        <div><h2>LIFTER GLOSS®</h2>
+                        <p class="price">9<sup>.99$</sup></p>
+                        <p class="descr">LIP GLOSS MAKEUP WITH HYALURONIC ACID</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div>
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes3" src="https://www.maybelline.com/~/media/mny/us/lips-makeup/lipstick/super-stay-vinyl-ink-longwear-liquid-lipstick/new-images/packshots/maybelline-superstay-vinyl-ink-global-35-cheeky-041554071023-allure.jpg">
+                        <div><h2>SUPER STAY®</h2>
+                        <p class="price">12<sup>.99$</sup></p>
+                        <p class="descr">VINYL INK LONGWEAR LIQUID LIPCOLOR</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div>
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes4" src="https://www.maybelline.com/~/media/mny/us/eye-makeup/brow/tattoostudio-brow-lift-tinted-brow-gel/maybelline-eye-tattoo-studio-brow-lift-us-255-soft-brown-041554071825-o2.jpg">
+                        <div><h2>TATTOOSTUDIO™</h2>
+                        <p class="price">12<sup>.99$</sup></p>
+                        <p class="descr">BROW LIFT STICK, FADE-RESISTANT & SMUDGE-RESISTANT</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes5" src="https://www.maybelline.com/~/media/mny/us/lips-makeup/lipstick/superstay-matte-ink-liquid-lipstick-into-the-zodiac/maybelline-lip-superstay-matte-ink-zodiac-edition-15-lover-cancer-041554071382-o.jpg">
+                        <div><h2>SUPERSTAY®</h2>
+                        <p class="price">9<sup>.49$</sup></p>
+                        <p class="descr">MATTE INK LIQUID LIPSTICK INTO THE ZODIAC</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes6" src="https://www.maybelline.com/~/media/mny/us/face-makeup/bbcream/fit-me-tinted-moisturizer/maybelline-fit-me-tinted-moisturizer-220-041554062939-c2.jpg">
+                        <div><h2>FIT ME!®</h2>
+                        <p class="price">10<sup>.99$</sup></p>
+                        <p class="descr">TINTED MOISTURIZER, NATURAL COVERAGE, FACE MAKEUP</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes7" src="https://www.maybelline.com/~/media/mny/us/lips-makeup/lipstick/color-sensational-ultimatte-slim-lipstick-makeup/maybelline-color-sensational-ultimatte-999-more-truffle-041554582246-primary-allure.jpg">
+                        <div><h2>COLOR SENSATIONAL ULTIMATTE</h2>
+                        <p class="price">9<sup>.49$</sup></p>
+                        <p class="descr">SLIM LIPSTICK MAKEUP</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes8" src="https://www.maybelline.com/~/media/mny/us/face-makeup/powder/lasting-fix-banana-powder-loose-setting-powder-makeup/maybelline-lasting-fix-banana-powder-041554586480.jpg">
+                        <div><h2>LASTING FIX</h2>
+                        <p class="price">9<sup>.99$</sup></p>
+                        <p class="descr">BANANA POWDER, LOOSE SETTING POWDER MAKEUP</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes9" src="https://www.maybelline.com/~/media/mny/us/eye-makeup/mascara/the-falsies-lash-lift-washable-mascara-eye-makeup/maybelline-falsies-lash-lift-ultra-black-intensifier-195-ultra-black-041554590364-primary%20(1).jpg">
+                        <div><h2>THE FALSIES®</h2>
+                        <p class="price">11<sup>.99$</sup></p>
+                        <p class="descr">LASH LIFT WASHABLE MASCARA EYE MAKEUP</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes10" src="https://www.maybelline.com/~/media/mny/us/eye-makeup/eyeliner/tattoostudio-liquid-ink-eyeliner/maybelline-tattoo-studio-liquid-liner-ink-black-oward-seal.jpg">
+                        <div><h2>TATTOOSTUDIO™</h2>
+                        <p class="price">7<sup>.99$</sup></p>
+                        <p class="descr">LIQUID INK EYELINER</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes11" src="https://www.maybelline.com/~/media/mny/us/lips-makeup/lipstick/superstay-ink-crayon-lipstick-matte-longwear-lipstick-makeup/maybelline-superstay-matte-lip-crayon-12hr-treat-yourself-041554558814-o-us-allure.jpg">
+                        <div><h2>SUPER STAY®</h2>
+                        <p class="price">10<sup>.99$</sup></p>
+                        <p class="descr">INK CRAYON LIPSTICK, MATTE LONGWEAR LIPSTICK MAKEUP</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes12" src="https://www.maybelline.com/~/media/mny/us/lips-makeup/lipstick/color-sensational-made-for-all-lipstick/maybelline-color-sensational-made-385-made-for-all-ruby-for-me-3600531543365-primary.jpg">
+                        <div><h2>COLOR SENSATIONAL®</h2>
+                        <p class="price">7<sup>.49$</sup></p>
+                        <p class="descr">MADE FOR ALL LIPSTICK</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div>     
+                    <!-------------------------------------------------------------->             
+                    <div class="product_item">
+                        <img alt="shoes13" src="https://www.maybelline.com/~/media/mny/us/eye-makeup/eyeliner/lasting-drama-light-eyeliner-pencil/maybelline-eyeliner-lasting-drama-light-twinkle-black-041554546361-o-with-seal.jpg">
+                        <div><h2>LASTING DRAMA®</h2>
+                        <p class="price">5<sup>.99$</sup></p>
+                        <p class="descr">LIGHT EYELINER PENCIL</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes14" src="https://www.maybelline.com/~/media/mny/global/eye-makeup/mascara/volum-express-falsies-flared-washable/maybelline-mascara-falsies-flared-blackest-black-041554268706-o.jpg">
+                        <div><h2>VOLUM' EXPRESS®</h2>
+                        <p class="price">9<sup>.99$</sup></p>
+                        <p class="descr">THE FALSIES FLARED® WASHABLE MASCARA</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes14" src="https://www.maybelline.com/~/media/mny/global/eye-makeup/mascara/volum-express-the-colossal-waterproof-mascara/maybelline-mascara-colossal-waterproof-classic-black-041554197044-o.jpg">
+                        <div><h2>VOLUM' EXPRESS®</h2>
+                        <p class="price">9<sup>.99$</sup></p>
+                        <p class="descr">THE COLOSSAL® WATERPROOF MASCARA</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes14" src="https://www.maybelline.com/~/media/mny/global/eye-makeup/mascara/volum-express-pumped-up-colossal-waterproof-mascara/maybelline-mascara-pumped-up-colossal-waterproof-classic-black-041554409321-o.jpg">
+                        <div><h2>VOLUM' EXPRESS®</h2>
+                        <p class="price">9<sup>.99$</sup></p>
+                        <p class="descr">PUMPED UP! COLOSSAL® WATERPROOF MASCARA</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div> 
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes14" src="https://www.maybelline.com/~/media/mny/global/eye-makeup/mascara/lash-sensational-washable-mascara/maybelline-mascara-lash-sensational-blackest-black-041554420616-o.jpg">
+                        <div><h2>LASH SENSATIONAL®</h2>
+                        <p class="price">9<sup>.99$</sup></p>
+                        <p class="descr">WASHABLE MASCARA</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div>
+                    <!-------------------------------------------------------------->
+                    <div class="product_item">
+                        <img alt="shoes14" src="https://www.maybelline.com/~/media/mny/global/eye-makeup/mascara/lash-sensational-lucious-washable-mascara/maybelline-mascara-lash-sensational-luscious-blackest-black-04154460247-o.jpg">
+                        <div><h2>LASH SENSATIONAL®</h2>
+                        <p class="price">11<sup>.99$</sup></p>
+                        <p class="descr">LUSCIOUS WASHABLE MASCARA</p>
+                        <br>
+                        <a href="#"><p>Add to cart</p></a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== APP =====-->
+            <section class="app section" id="app">
+                <h2 class="section-title">APP</h2>
+                <div class="container_app">
+                    <div class="maindiv">
+                        <div class="mobile">
+                            <div class="head">
+                                <div class="notch"></div>
+                                <div class="profilebox">
+                                  <div class="left">
+                                    <i class='bx bx-chevron-left' aria-hidden="true" style="font-size: calc(var(--small-font-size) * 3);"></i>
+                                    <div class="profile">
+                                      <img src="assets/img/img_user.png" alt="dp">
+                                      <div class="pdetail">
+                                        <h3>Trang Ha</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                 <i class='bx bx-list-ul' aria-hidden="true" style="font-size: calc(var(--small-font-size) * 3)"></i>
+                                </div>
+                              </div>
+                              <div class="chatbox">
+                                <div class="eachmessage received animate">
+                                  <p>Hello. I want to dress up in a style suitable for my boyfriend's birthday event</p>
+                                </div>
+                                <div class="eachmessage received animate">
+                                  <p>It must be light and striking!</p>
+                                </div>
+                                <div class="eachmessage imgbox">
+                                  <img class="animate" src="https://www.maybelline.vn/~/media/mny/vi_vn/1%20homepage/homepage%20caroussel/looks%201%20_600x900%20(1).jpg?h=900&w=600&la=vi-VN&hash=BE66158A18D8D48F2281630EF080509FC4422A0A" alt="dog1">
+                                  <img class="animate" src="https://www.maybelline.vn/~/media/mny/vi_vn/1%20homepage/homepage%20caroussel/looks%202%20_600x900.jpg?h=900&w=600&la=vi-VN&hash=321CB76A941F9E52C28348A05247F9E0A7A8F9D1" alt="dog2">
+                                  <img class="animate" src="https://www.maybelline.vn/~/media/mny/vi_vn/1%20homepage/homepage%20caroussel/looks%204%20_600x900.jpg?h=900&w=600&la=vi-VN&hash=3EBE387A3546F6AC605661DE769F77C852602148" alt="dog3">
+                                </div>
+                                <div class="eachmessage sent animate">
+                                  <p>We understood. Here are some makeup styles that we think suit you best!</p>
+                                </div>
+                                <div class="eachmessage sent animate">
+                                  <p>How do you feel?</p>
+                                </div>
+                                <div class="eachmessage received animate">
+                                  <p>I find that very appropriate. I want a second style makeup.</p>
+                                </div>
+                                <div class="deal animate">
+                                  <div class="det">
+                                    <input type="radio" name="plan">
+                                    <p>Option 1</p>
+                                  </div>
+                                </div>
+                                <div class="deal animate">
+                                  <div class="det">
+                                    <input type="radio" name="plan">
+                                    <p>Option 2</p>
+                                  </div>
+                                </div>
+                                <div class="deal animate">
+                                  <div class="det">
+                                    <input type="radio" name="plan">
+                                    <p>Option 3</p>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="sendbox">
+                              <input type="text" placeholder="Type a message…">
+                              <button class="submit"><i class='bx bx-chevron-right' aria-hidden="true" style="font-size: calc(var(50rem) * 3);" ></i></button>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h1>VIRTUAL TRY ON</h1>
+                            <img src="https://www.maybelline.vn/~/media/mny/vi_vn/1%20homepage/homepage%20caroussel/hnh%201_427x427.jpg?h=427&w=427&la=vi-VN&hash=34AB25E1F1151319F037262930C3782879F6D6B8" style="display:inline-block;">
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    animate = document.querySelectorAll(".animate");
+                    submit=document.querySelector(".submit");
+                    text=document.querySelector(".sendbox input");
+                    chatbox=document.querySelector(".chatbox");
+                    submit.addEventListener("click",sendmessage)
+                    text.addEventListener("keyup",function(e){
+                        console.log(e)
+                        if (e.key === 'Enter' || e.keyCode === 13)
+                        sendmessage()
+                    })
+                    start_animation();
+
+                    function start_animation() {
+                      for (let i = 0; i < animate.length; i++) {
+                        setTimeout(function () {
+                          animate[i].classList.add("animated");
+                        }, 300 * i + 300);
+                      }
+                    }
+                    function sendmessage()
+                    {
+                        data=text.value.trim()
+                        if(data!="")
+                            chatbox.innerHTML+='<div class="eachmessage sent animated"><p>'+data+'</p></div>'
+                        text.value=""
+                        chatbox.scrollTop=chatbox.scrollHeight
+                    }
+                </script>
+            </section>
+
+            <!--===== NFT =====-->
+            <section class="nft section" id="nft">
+                <h2 class="section-title">NFT</h2>
+                <div class="container_nft">
+                    <!-- // Item 1 -->
+                    <div class="grid-item">
+                        <div class="item-style">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="https://www.maybelline.vn/~/media/mny/vi_vn/2%20eyes/web-feb-11/palette-2.jpg?h=500&w=500&la=vi-VN&hash=77EEA8E340EE5DA4C433B49D0EB61F19364D701D" alt="">
+                                </a>
+                                <button class="reaction-btn">
+                                    <i class="ri-heart-fill"></i>
+                                    <span>959</span>
+                                </button>
+                            </div>
+                            <!-- // Thumb -->
+
+                            <div class="content_nft">
+                                <h3 class="title">
+                                    <a href="#">NFT: Style 1</a>
+                                </h3>
+
+                                <div class="profile d-flex-center">
+                                    <a href="#">
+                                        <img src="./assets/img/logo_1.jpg" class="image-avatar" alt="">
+                                    </a>
+                                    <a href="#" class="author-text">
+                                        @miracle
+                                    </a>
+                                    <i class="ri-shield-check-fill"></i>
+                                </div>
+                                <!-- Author -->
+
+                                <div class="product-owner d-flex-center">
+                                    <span class="bid-owner">
+                                        <strong>PRICE: (7 / 10)</strong>
+                                    </span>
+                                    <span class="biding-price d-flex-between">
+                                        <i class="ri-arrow-up-line"></i>
+                                        49.1 ETH
+                                    </span>
+                                </div>
+                                <!-- Price -->
+
+                                <div class="product-buy d-flex-between">
+                                    <a href="#" class="btn_nft">
+                                        <span>
+                                            <i class="ri-time-line"></i> 8 hours left
+                                        </span>
+                                    </a>
+                                    <a href="#" class="btn_nft btn-cart btn-outline">
+                                        <span>
+                                            <i class="ri-shopping-cart-line"></i> Buy
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Cart -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- // Item 2 -->
+                    <div class="grid-item">
+                        <div class="item-style">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="https://www.maybelline.vn/~/media/mny/vi_vn/2%20eyes/web-feb-11/liner%20-%20copy-2.jpg?h=500&w=500&la=vi-VN&hash=BD490445622E78C498E851F453C392508E77BFA7" alt="">
+                                </a>
+                                <button class="reaction-btn">
+                                    <i class="ri-heart-fill"></i>
+                                    <span>795</span>
+                                </button>
+                            </div>
+                            <!-- // Thumb -->
+
+                            <div class="content_nft">
+                                <h3 class="title">
+                                    <a href="#">NFT:  Style 2</a>
+                                </h3>
+
+                                <div class="profile d-flex-center">
+                                    <a href="#">
+                                        <img src="./assets/img/logo_1.jpg" class="image-avatar" alt="">
+                                    </a>
+                                    <a href="#" class="author-text">
+                                        @miracle
+                                    </a>
+                                    <i class="ri-shield-check-fill"></i>
+                                </div>
+                                <!-- Author -->
+
+                                <div class="product-owner d-flex-center">
+                                    <span class="bid-owner">
+                                        <strong>PRICE: (9 / 10)</strong>
+                                    </span>
+                                    <span class="biding-price d-flex-between">
+                                        <i class="ri-arrow-up-line"></i>
+                                        99.1 ETH
+                                    </span>
+                                </div>
+                                <!-- Price -->
+
+                                <div class="product-buy d-flex-between">
+                                    <a href="#" class="btn_nft">
+                                        <span>
+                                            <i class="ri-time-line"></i> 21 hours left
+                                        </span>
+                                    </a>
+                                    <a href="#" class="btn_nft btn-cart btn-outline">
+                                        <span>
+                                            <i class="ri-shopping-cart-line"></i> Buy
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Cart -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- // Item 3 -->
+                    <div class="grid-item">
+                        <div class="item-style">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="https://www.maybelline.vn/~/media/mny/vi_vn/2%20eyes/modules/promo%20with%20products/mascara.jpg?h=500&w=500&la=vi-VN&hash=48A79F2CA203F36D2FE86FF78B026642AC255EA5" alt="">
+                                </a>
+                                <button class="reaction-btn">
+                                    <i class="ri-heart-fill"></i>
+                                    <span>696</span>
+                                </button>
+                            </div>
+                            <!-- // Thumb -->
+
+                            <div class="content_nft">
+                                <h3 class="title">
+                                    <a href="#">NFT: Style 3</a>
+                                </h3>
+
+                                <div class="profile d-flex-center">
+                                    <a href="#">
+                                        <img src="./assets/img/logo_1.jpg" class="image-avatar" alt="">
+                                    </a>
+                                    <a href="#" class="author-text">
+                                        @miracle
+                                    </a>
+                                    <i class="ri-shield-check-fill"></i>
+                                </div>
+                                <!-- Author -->
+
+                                <div class="product-owner d-flex-center">
+                                    <span class="bid-owner">
+                                         <strong>PRICE: (5 / 10)</strong>
+                                    </span>
+                                    <span class="biding-price d-flex-between">
+                                        <i class="ri-arrow-up-line"></i>
+                                        69.1 ETH
+                                    </span>
+                                </div>
+                                <!-- Price -->
+
+                                <div class="product-buy d-flex-between">
+                                    <a href="#" class="btn_nft">
+                                        <span>
+                                            <i class="ri-time-line"></i> 20 hours left
+                                        </span>
+                                    </a>
+                                    <a href="#" class="btn_nft btn-cart btn-outline">
+                                        <span>
+                                            <i class="ri-shopping-cart-line"></i> Buy
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Cart -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- // Item 4 -->
+                    <div class="grid-item">
+                        <div class="item-style">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="https://www.maybelline.vn/~/media/mny/vi_vn/1%20homepage/homepage%20caroussel/looks%201%20_600x900%20(1).jpg?h=900&w=600&la=vi-VN&hash=BE66158A18D8D48F2281630EF080509FC4422A0A" alt="">
+                                </a>
+                                <button class="reaction-btn">
+                                    <i class="ri-heart-fill"></i>
+                                    <span>696</span>
+                                </button>
+                            </div>
+                            <!-- // Thumb -->
+
+                            <div class="content_nft">
+                                <h3 class="title">
+                                    <a href="#">NFT: Style 4</a>
+                                </h3>
+
+                                <div class="profile d-flex-center">
+                                    <a href="#">
+                                        <img src="./assets/img/logo_1.jpg" class="image-avatar" alt="">
+                                    </a>
+                                    <a href="#" class="author-text">
+                                        @miracle
+                                    </a>
+                                    <i class="ri-shield-check-fill"></i>
+                                </div>
+                                <!-- Author -->
+
+                                <div class="product-owner d-flex-center">
+                                    <span class="bid-owner">
+                                         <strong>PRICE: (5 / 10)</strong>
+                                    </span>
+                                    <span class="biding-price d-flex-between">
+                                        <i class="ri-arrow-up-line"></i>
+                                        69.1 ETH
+                                    </span>
+                                </div>
+                                <!-- Price -->
+
+                                <div class="product-buy d-flex-between">
+                                    <a href="#" class="btn_nft">
+                                        <span>
+                                            <i class="ri-time-line"></i> 20 hours left
+                                        </span>
+                                    </a>
+                                    <a href="#" class="btn_nft btn-cart btn-outline">
+                                        <span>
+                                            <i class="ri-shopping-cart-line"></i> Buy
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Cart -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- // Item 3 -->
+                    <div class="grid-item">
+                        <div class="item-style">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="https://www.maybelline.vn/~/media/mny/vi_vn/1%20homepage/homepage%20caroussel/looks%202%20_600x900.jpg?h=900&w=600&la=vi-VN&hash=321CB76A941F9E52C28348A05247F9E0A7A8F9D1" alt="">
+                                </a>
+                                <button class="reaction-btn">
+                                    <i class="ri-heart-fill"></i>
+                                    <span>696</span>
+                                </button>
+                            </div>
+                            <!-- // Thumb -->
+
+                            <div class="content_nft">
+                                <h3 class="title">
+                                    <a href="#">NFT: Style 5</a>
+                                </h3>
+
+                                <div class="profile d-flex-center">
+                                    <a href="#">
+                                        <img src="./assets/img/logo_1.jpg" class="image-avatar" alt="">
+                                    </a>
+                                    <a href="#" class="author-text">
+                                        @miracle
+                                    </a>
+                                    <i class="ri-shield-check-fill"></i>
+                                </div>
+                                <!-- Author -->
+
+                                <div class="product-owner d-flex-center">
+                                    <span class="bid-owner">
+                                         <strong>PRICE: (5 / 10)</strong>
+                                    </span>
+                                    <span class="biding-price d-flex-between">
+                                        <i class="ri-arrow-up-line"></i>
+                                        69.1 ETH
+                                    </span>
+                                </div>
+                                <!-- Price -->
+
+                                <div class="product-buy d-flex-between">
+                                    <a href="#" class="btn_nft">
+                                        <span>
+                                            <i class="ri-time-line"></i> 20 hours left
+                                        </span>
+                                    </a>
+                                    <a href="#" class="btn_nft btn-cart btn-outline">
+                                        <span>
+                                            <i class="ri-shopping-cart-line"></i> Buy
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Cart -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- // Item 3 -->
+                    <div class="grid-item">
+                        <div class="item-style">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="https://www.maybelline.vn/~/media/mny/vi_vn/1%20homepage/homepage%20caroussel/looks%204%20_600x900.jpg?h=900&w=600&la=vi-VN&hash=3EBE387A3546F6AC605661DE769F77C852602148" alt="">
+                                </a>
+                                <button class="reaction-btn">
+                                    <i class="ri-heart-fill"></i>
+                                    <span>696</span>
+                                </button>
+                            </div>
+                            <!-- // Thumb -->
+
+                            <div class="content_nft">
+                                <h3 class="title">
+                                    <a href="#">NFT: Style 6</a>
+                                </h3>
+
+                                <div class="profile d-flex-center">
+                                    <a href="#">
+                                        <img src="./assets/img/logo_1.jpg" class="image-avatar" alt="">
+                                    </a>
+                                    <a href="#" class="author-text">
+                                        @miracle
+                                    </a>
+                                    <i class="ri-shield-check-fill"></i>
+                                </div>
+                                <!-- Author -->
+
+                                <div class="product-owner d-flex-center">
+                                    <span class="bid-owner">
+                                         <strong>PRICE: (5 / 10)</strong>
+                                    </span>
+                                    <span class="biding-price d-flex-between">
+                                        <i class="ri-arrow-up-line"></i>
+                                        69.1 ETH
+                                    </span>
+                                </div>
+                                <!-- Price -->
+
+                                <div class="product-buy d-flex-between">
+                                    <a href="#" class="btn_nft">
+                                        <span>
+                                            <i class="ri-time-line"></i> 20 hours left
+                                        </span>
+                                    </a>
+                                    <a href="#" class="btn_nft btn-cart btn-outline">
+                                        <span>
+                                            <i class="ri-shopping-cart-line"></i> Buy
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- Cart -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact__container bd-grid">
+                    <div class="contact__img">
+                        <img src="assets/img/img_contact.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="contact__subtitle">We're Miracle</h2>
+                        <p class="contact__text">Introducing Team Miracle, a team composed of university students who are passionate and creative in the fields of AI and business. They have dedicated their time and effort in learning and honing their skills to become experts in these fields. We believe that by utilizing the knowledge and experience they have gained in university, we can bring high-quality and innovative products to the Loreal Brandstorm 2023 competition. <br>However, our goal does not stop at just using knowledge. We are also constantly seeking new and efficient solutions for issues related to AI and business through our creativity and dedication.<br>We believe that with the commitment and creativity of university students, we can create unique and outstanding products for the Loreal Brandstorm 2023 competition.</p>           
+                    </div>                                   
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">Miracle</h2>
+                    <p class="footer__text">Hope our products will be useful to users.</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">Trend</a></li>
+                        <li><a href="#about" class="footer__link">Product</a></li>
+                        <li><a href="#skills" class="footer__link">App</a></li>
+                        <li><a href="#portfolio" class="footer__link">NFT</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">FOLLOW</h2>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
